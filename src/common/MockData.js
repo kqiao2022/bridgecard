@@ -1,4 +1,4 @@
-export const cardsResult = [
+export const cardsMock = [
   { point: 0, rank: 1, suit: "s", value: 1 },
   { point: 0, rank: 1, suit: "h", value: 2 },
   { point: 0, rank: 1, suit: "d", value: 3 },
@@ -50,5 +50,24 @@ export const cardsResult = [
   { point: 4, rank: 13, suit: "s", value: 1 },
   { point: 4, rank: 13, suit: "h", value: 2 },
   { point: 4, rank: 13, suit: "d", value: 3 },
-  { point: 4, rank: 13, suit: "c", value: 4 },
+  { point: 4, rank: 13, suit: "c", value: 4 }
 ];
+export const seatsMock = [
+  {
+    id: "n",assertPoints:14, cards: [
+      { id: 0, data: { point: 0, rank: 1, suit: "s", value: 1 }},
+      { id: 1, data: { point: 0, rank: 7, suit: "s", value: 1 }},
+      { id: 2, data: { point: 4, rank: 13, suit: "d", value: 3 }},
+      { id: 3, data: { point: 4, rank: 13, suit: "c", value: 4 }},
+      { id: 4, data: { point: 0, rank: 9, suit: "h", value: 2 }},
+      { id: 5, data: { point: 1, rank: 10, suit: "d", value: 3 }},
+      { id: 6, data: { point: 0, rank: 6, suit: "s", value: 1 }},
+      { id: 7, data: { point: 0, rank: 8, suit: "h", value: 2 }},
+      { id: 8, data: { point: 0, rank: 8, suit: "s", value: 1 }},
+      { id: 9, data: { point: 0, rank: 5, suit: "d", value: 3 }},
+      { id: 10, data: { point: 3, rank: 12, suit: "c", value: 4 }},
+      { id: 11, data: { point: 0, rank: 9, suit: "c", value: 4 }},
+      { id: 12, data: { point: 2, rank: 11, suit: "d", value: 3 }}
+    ]
+  }
+]

@@ -1,8 +1,18 @@
-import { shuffle, make_deck } from "./GameManager";
-import { cardsResult } from "./MockData";
+import { shuffle, makeDeck,settleSeat} from "./GameManager";
+import { cardsMock,seatsMock } from "./MockData";
 
-test("make_deck function", () => {
-  const cards = [];
-  make_deck(cards);
-  expect(JSON.stringify(cards)).toBe(JSON.stringify(cardsResult));
+test("shuffle function", () => {
+  const cards = shuffle();
+  for(let card of cardsMock){
+    let cs = cards.filter((c)=>c['rank']===card['rank']&&c['point']===card['point']&&c['suit']===card['suit']&&c['value']===card['value']);
+    expect(cs.length).toBe(1)
+  }
+  expect(cards.length).toBe(52)
+});
+
+test("settleSeat function", () => {
+  for(let seat of seatsMock){
+   settleSeat(seat);
+   expect(seat['points']).toBe(seat['assertPoints'])
+  }
 });

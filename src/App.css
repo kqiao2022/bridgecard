@@ -36,11 +36,46 @@
     transform: rotate(360deg);
   }
 }
-.c {
+.card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   position: absolute;
   cursor: pointer;
   will-change: transform, opacity;
+}
+.table-container {
+  position: absolute;
+  top: -100;
+  left: 0;
+  height: 850px;
+  width: 900px;
+  background-color: grey;
+  overflow: hidden 
+}
+.table-body {
+  position: absolute;
+  top: 400px;
+  left: 450px
+}
+.action-panel{
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100% 
+}
+.action-btn{
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 30px; 
+  background-color: rgb(173, 127, 26);
+  color: white;
+  border-radius: 5px; 
 }

@@ -1,12 +1,11 @@
 
-import React, { useEffect, useCallback } from "react";
+import React, { useEffect} from "react";
 
 function useSeatCoordsGet() {
 
   const [coords, setCoords] = React.useState();
 
   useEffect(() => {
-    // console.log("update coords")
     initCoords()
     // window.addEventListener('resize', initCoords)
   }, [])
@@ -18,7 +17,7 @@ function useSeatCoordsGet() {
     let y = 170;
     let x = 270;
     for (let i = 0; i < 13; i++) {
-      if (i == 6) {
+      if (i === 6) {
         x = 235;
         y = 100;
       }
@@ -32,7 +31,7 @@ function useSeatCoordsGet() {
     y = 300;
     x = 700;
     for (let i = 0; i < 13; i++) {
-      if (i == 6) {
+      if (i === 6) {
         x = 770;
         y = 270;
       }
@@ -46,7 +45,7 @@ function useSeatCoordsGet() {
     y = 650;
     x = 270;
     for (let i = 0; i < 13; i++) {
-      if (i == 6) {
+      if (i === 6) {
         x = 235;
         y = 720;
       }
@@ -59,7 +58,7 @@ function useSeatCoordsGet() {
     y = 300;
     x = 300;
     for (let i = 0; i < 13; i++) {
-      if (i == 6) {
+      if (i === 6) {
         x = 230;
         y = 270;
       }
