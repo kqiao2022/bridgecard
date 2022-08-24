@@ -68,15 +68,26 @@ function Table({ event, ...props }) {
     }
     await sleep(10);
     dispatch(createEvent({ name: "settle" }));
-   
+
 
   }
   const playAgain = async () => {
 
-    api.start(index => ({ opacity: 1, x: 0, y:0 }))
+    api.start(index => {
+      if (index < 13)
+        return { opacity: 1, x: 15, y: 0 }
+      else if (index >= 13 && index < 26)
+        return { opacity: 1, x: 10, y: 0 }
+      else if (index >= 26 && index < 39)
+        return { opacity: 1, x: 5, y: 0 }
+      else
+        return { opacity: 1, x: 0, y: 0 }
+
+    })
+
     await sleep(10);
     dispatch(createEvent({ name: "playNew" }))
-    setTimeout(()=>setStatus(0),100)
+    setTimeout(() => setStatus(0), 100)
   }
   return (
     <div className="table-container">
