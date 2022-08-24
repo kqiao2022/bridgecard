@@ -29,6 +29,8 @@ function Table({ event, ...props }) {
   useEffect(() => {
     if (event['name'] === "gameOver")
       setStatus(2)
+    else if (event['name'] === "settle")
+      setStatus(4)
   }, [event])
   const play = async () => {
     setStatus(1)
@@ -66,6 +68,7 @@ function Table({ event, ...props }) {
     }
     await sleep(10);
     dispatch(createEvent({ name: "settle" }));
+   
 
   }
   const playAgain = async () => {
@@ -90,7 +93,7 @@ function Table({ event, ...props }) {
       <div className="action-panel">
         {status === 0 ? <div className="action-btn" onClick={play}><span>Play</span></div> : null}
         {status === 2 ? <div className="action-btn" onClick={settle}><span>Settle</span></div> : null}
-        {status === 3 ? <div className="action-btn" onClick={playAgain}><span>Ready For Play Again</span></div> : null}
+        {status === 4 ? <div className="action-btn" onClick={playAgain}><span>Ready For Play Again</span></div> : null}
       </div>
     </div>
   );

@@ -60,13 +60,9 @@
 }
 .action-panel{
   position: absolute;
-  bottom: 0px;
-  left: 0px;
+  top: 500px;
+  left: 420px;
   z-index: 1000;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 100% 
 }
 .action-btn{
   cursor: pointer;
@@ -74,7 +70,7 @@
   justify-content: center;
   align-items: center;
   width: 120px;
-  height: 30px; 
+  height: 50px; 
   background-color: rgb(173, 127, 26);
   color: white;
   border-radius: 5px; 
