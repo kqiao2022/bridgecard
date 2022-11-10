@@ -12,24 +12,24 @@ function Seat({ seat, dispatch, event, ...props }) {
   useEffect(() => {
     switch (seat['id']) {
       case "e":
-        api.start({transform: `rotate(90deg)` })
+        api.start({ transform: `rotate(90deg)` })
         break;
       case "s":
-        api.start({transform: `rotate(180deg)` })
+        api.start({ transform: `rotate(180deg)` })
         break;
       case "w":
-        api.start({transform: `rotate(-90deg)` })
+        api.start({ transform: `rotate(-90deg)` })
         break;
       default:
         break;
     }
-  }, [seat,api])
+  }, [seat, api])
   useEffect(() => {
     if (event['name'] === "settle")
       api.start({ opacity: 1 })
-    else if(event['name']==="playNew")
+    else if (event['name'] === "playNew")
       api.start({ opacity: 0 })
-  }, [event,api])
+  }, [event, api])
   function getTop() {
 
     if (seat['id'] === "n")
@@ -52,8 +52,8 @@ function Seat({ seat, dispatch, event, ...props }) {
     <div style={{ position: "absolute", top: 0, left: 0 }}>
       {seat && seat['cards'].map((c, index) => <Card key={index} position={seat['id']} card={c} />)}
       <animated.div style={{ position: "absolute", top: getTop(), left: getLeft(), width: 120, height: 60, color: "white", ...styles }}>
-        {seat?<div><span style={{fontSize:10}}>{seat['subPoints'] && seat['subPoints'].map((p) => p + "  ")}</span></div>:null}
-        {seat?<div>{seat['points'] && seat['points'] ? seat['points'] : 0}</div>:null}
+        {seat ? <div><span style={{ fontSize: 10 }}>{seat['subPoints'] && seat['subPoints'].map((p) => p + "  ")}</span></div> : null}
+        {seat ? <div>{seat['points'] && seat['points'] ? seat['points'] : 0}</div> : null}
       </animated.div>
     </div>
   );

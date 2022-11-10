@@ -95,7 +95,7 @@ function Table({ event, ...props }) {
       <div className="table-body">
         {springs.map((styles, index) => <animated.div key={index}
           className="card"
-          style={{ width: 45, height: 90, backgroundImage: `url("/images/back.png")`, backgroundRepeat: "no-repeat", backgroundPosition: "center", backgroundSize: "contain", ...styles }}
+          style={{ width: 45, height: 90, backgroundImage: `url("./images/back.png")`, backgroundRepeat: "no-repeat", backgroundPosition: "center", backgroundSize: "contain", ...styles }}
         >
         </animated.div>)}
       </div>

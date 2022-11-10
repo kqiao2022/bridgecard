@@ -47,10 +47,10 @@ function Card({ card, position, event, ...props }) {
 
   }, [event, card, coverApi])
 const cardImage = () => {
-  let src = "/images/10_of_clubs.png"
+  let src = "./images/10_of_clubs.png"
   let data = card['data'];
   if (data) {
-    src = "/images/";
+    src = "./images/";
     if (data['rank'] === 13)
       src = src + "ace_of_";
     else if (data['rank'] === 10)
@@ -89,7 +89,7 @@ return (
       <animated.div style={{ ...coverStyles }}>
         <animated.div
           className="card"
-          style={{ width: 45, height: 90, opacity: flipStyles.opacity.to(o => 1 - o), transform: flipStyles.transform, backgroundImage: `url("/images/back.png")`, backgroundRepeat: "no-repeat", backgroundPosition: "center", backgroundSize: "contain" }}
+          style={{ width: 45, height: 90, opacity: flipStyles.opacity.to(o => 1 - o), transform: flipStyles.transform, backgroundImage: `url("./images/back.png")`, backgroundRepeat: "no-repeat", backgroundPosition: "center", backgroundSize: "contain" }}
         >
         </animated.div>
         <animated.div
